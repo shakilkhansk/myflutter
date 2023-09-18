@@ -8,3 +8,11 @@
       )
     );
   }
+//------------------------Button---------------------------//
+    ButtonStyle buttonStyle = ElevatedButton.styleFrom(
+      padding: EdgeInsets.all(15),
+      backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
+      elevation: 5
+    );
