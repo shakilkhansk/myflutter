@@ -8,7 +8,7 @@
       )
     );
   }
-//------------------------Button---------------------------//
+//------------------------ElevatedButton Button---------------------------//
     ButtonStyle buttonStyle = ElevatedButton.styleFrom(
       padding: EdgeInsets.all(15),
       backgroundColor: Colors.green,
@@ -16,3 +16,16 @@
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(8))),
       elevation: 5
     );
+//------------------------Alert Dialogue---------------------------//
+MyAlertDialoge(context){
+  return showDialog(context: context, builder: (BuildContext context) {
+    return Expanded(child: AlertDialog(
+      title: Text('Alert!'),
+      content: Text('Are you sure?'),
+      actions: [
+        ElevatedButton(onPressed: (){Navigator.of(context).pop();}, child: Text('No')),
+        ElevatedButton(onPressed: (){MySnackBar('Yes', context);}, child: Text('Yes')),
+      ],
+    ));
+  });
+}
